@@ -1,0 +1,82 @@
+[
+  {
+    "name": "rotate target forwards",
+    "keys": "ctrl+shift+w",
+    "script": "starmourn.ui.info.rotate_forwards()"
+  },
+  {
+    "name": "rotate target backwards",
+    "keys": "ctrl+shift+q",
+    "script": "starmourn.ui.info.rotate_backwards()"
+  },
+  {
+    "name": "chat all",
+    "keys": "alt+1",
+    "script": "starmourn.ui.chat.switch('All')"
+  },
+  {
+    "name": "chat local",
+    "keys": "alt+2",
+    "script": "starmourn.ui.chat.switch('Local')"
+  },
+  {
+    "name": "chat crew",
+    "keys": "alt+3",
+    "script": "starmourn.ui.chat.switch('Crew')"
+  },
+  {
+    "name": "chat clan",
+    "keys": "alt+4",
+    "script": "starmourn.ui.chat.switch('Clan')"
+  },
+  {
+    "name": "chat dynasty",
+    "keys": "alt+5",
+    "script": "starmourn.ui.chat.switch('Dynasty')"
+  },
+  {
+    "name": "chat faction",
+    "keys": "alt+6",
+    "script": "starmourn.ui.chat.switch('Faction')"
+  },
+  {
+    "name": "chat newbie",
+    "keys": "alt+7",
+    "script": "starmourn.ui.chat.switch('Newbie')"
+  },
+  {
+    "name": "info room",
+    "keys": "ctrl+1",
+    "script": "starmourn.ui.info.switch('Room')"
+  },
+  {
+    "name": "info tasks",
+    "keys": "ctrl+2",
+    "script": "starmourn.ui.info.switch('Tasks')"
+  },
+  {
+    "name": "info inventory",
+    "keys": "ctrl+3",
+    "script": "starmourn.ui.info.switch('Inventory')"
+  },
+  {
+    "name": "bot claw",
+    "keys": "f2",
+    "script": "send('bot claw')"
+  },
+  {
+    "name": "bot harasss",
+    "keys": "f3",
+    "script": "send('bot harass')"
+  },
+  {
+    "name": "turret power",
+    "keys": "f4",
+    "script": "send('turret qpcboost')"
+  },
+  {
+    "name": "bot swing",
+    "keys": "f5",
+    "script": "send('bot swing')"
+  }
+]

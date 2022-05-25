@@ -1,0 +1,16 @@
+[
+  {
+    "name": "beacon",
+    "seconds": "6",
+    "script": "if starmourn.ui.on_ship then sendAll('ship details damage', 'ship beacon', false) end"
+  },
+  {
+    "name": "inventory",
+    "seconds": 6,
+    "script": "sendGMCP([[Char.Items.Inv '']])"
+  },
+  {
+    "name": "containers",
+    "seconds": 6
+  }
+]

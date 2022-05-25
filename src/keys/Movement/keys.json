@@ -1,0 +1,50 @@
+[
+  {
+    "name": "north",
+    "keys": "keypad+8"
+  },
+  {
+    "name": "south",
+    "keys": "keypad+2"
+  },
+  {
+    "name": "east",
+    "keys": "keypad+6"
+  },
+  {
+    "name": "west",
+    "keys": "keypad+4"
+  },
+  {
+    "name": "north east",
+    "keys": "keypad+9"
+  },
+  {
+    "name": "south east",
+    "keys": "keypad+3"
+  },
+  {
+    "name": "south west",
+    "keys": "keypad+1"
+  },
+  {
+    "name": "north west",
+    "keys": "keypad+7"
+  },
+  {
+    "name": "in",
+    "keys": "keypad+5"
+  },
+  {
+    "name": "out",
+    "keys": "keypad+0"
+  },
+  {
+    "name": "up",
+    "keys": "keypad+minus"
+  },
+  {
+    "name": "down",
+    "keys": "keypad+plus"
+  }
+]

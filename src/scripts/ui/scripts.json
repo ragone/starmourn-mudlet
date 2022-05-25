@@ -1,0 +1,27 @@
+[
+  {
+    "name": "namespace",
+    "script": "starmourn = starmourn or {}"
+  },
+  {
+    "name": "setup"
+  },
+  {
+    "name": "modules"
+  },
+  {
+    "name": "header"
+  },
+  {
+    "name": "chat"
+  },
+  {
+    "name": "mapper"
+  },
+  {
+    "name": "info"
+  },
+  {
+    "name": "init"
+  }
+]

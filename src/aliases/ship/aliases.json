@@ -1,0 +1,10 @@
+[
+  {
+    "name": "launch ship",
+    "regex": "^ship launch$"
+  },
+  {
+    "name": "dock ship",
+    "regex": "^ship dock$"
+  }
+]

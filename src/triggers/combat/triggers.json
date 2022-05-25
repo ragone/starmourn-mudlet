@@ -1,0 +1,274 @@
+[
+  {
+    "name": "highlight harass ready",
+    "highlight": "yes",
+    "highlightFG": "#FFFFFF",
+    "highlightBG": "#8700AF",
+    "patterns": [
+      {
+        "pattern": "Your bot can again harass someone.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "highlight turret power",
+    "highlight": "yes",
+    "highlightFG": "#FFFFFF",
+    "highlightBG": "#8700AF",
+    "patterns": [
+      {
+        "pattern": "^A deployed turret.+but doesn't have enough power to attack.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "known windups",
+    "highlight": "yes",
+    "highlightFG": "#FFFFFF",
+    "highlightBG": "#8700AF",
+    "patterns": [
+      {
+        "pattern": "^Throwing back its grizzled head\\, .+ lets out a high-pitched\\, wavering howl\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With an aggressive snarl\\, .+ scampers right for .+\\, its needlelike little fingers extended\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ draws in a deep breath\\, its sides beginning to swell alarmingly\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ hauls its body high and it looms above .+\\, moments from a terrible\\, crushing crash\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ shoots its trunk outwards and wraps it around .+\\, beginning to tighten it slowly in a crushing grip\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A low hum begins to whine from the blaster in .+ hand\\, red lights along the barrel growing brighter and brighter\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The LED lights glittering in the robotic stems of .+ begin to flash a dull but penetrating red\\, and the fleshy blossom pulses urgently\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ begins to rattle\\, steam pouring from its body as the meters and dials on its mechanical body glow bright red\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A high-pitched whistle of steam screams from .+\\, and it begins to spin in a rapid circle\\, firing bolts and scrap metal in every direction\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Curling in on herself\\, Tsake Shayato begins to shake rapidly\\, rocking back and forth in a ball of pent up rage and aggression\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Light begins to focus deep within the body of .+\\, growing to an almost painful radiance\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Staggering backwards\\, shoulder joint grinding\\, .+ draws back one of its massive\\, stony limbs\\, preparing to swing it\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ grows still and concentrates on something while glaring at .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ begins to glow with an ominous red light\\, and a faint humming noise begins to sound deep within it\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Rearing back on its powerful hind legs and muscular\\, prehensile tail\\, the moss lizard coils itself tight\\, ready tospring\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Spinning swiftly, .+ winds up its tail to whip it towards .+ at astonishing speeds\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Reeling backwards\\, .+ shoulders begin to lurch and heave in an alarming way\\, an incipient rumble gurgling up from its bloated midsection\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Bracing itself against the floor on four spindly legs\\, .+ arches its back as it starts to make a convulsive series of loud braying retches\\, saliva dripping between its tongues\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Bunching itself sinuously backwards for a moment\\, .+ begins to make rhythmic lurching movements and deep\\, glottal gagging noises\\, weirdly not unlike a cat that is about to vomit\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A disturbingly enraged\\, high pitched whine screeches loudly from a horned lapine\\, and it begins to thrash at the earth with its powerful back legs\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Rearing back on its powerful hind legs and muscular\\, prehensile tail\\, the moss lizard coils itself tight\\, ready to spring\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Aggressive and swift\\, .+ lunges towards .+ with a wide-open mouth\\, ready to bite down - hard\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ cocks a leg and draws it back\\, ready to kick it powerfully at .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ scuttles a little ways away and extends its ovipositor\\, beginning to expel a fleshy series of softball-sized white eggs\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ paws at the ground and lowers its head, preparing to charge at .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ around you\\, beginning to tighten and strangle\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Venom sacs at the base of .+ stinger begin to pulse, signaling a .+ attack\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A low growl rumbles from .+\\, and it wiggles its hindquarters\\, about to pounce at .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ abruptly goes still\\, an ominous buzzing sound beginning to whirr beneath its thick carapace\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Flying high\\, .+ folds its wings and plunges downward\\, hurtling directly towards you\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Opening its pincers wide\\, .+ rears back on its four back legs\\, preparing to attack .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ rolls and rumbles rockily across the ground\\, aiming to collide with .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ buzzes loudly and then divebombs .+\\, stinger-end first\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Tentacles from the bottom of .+ body drift ominously towards you\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ begins to open\\, preparing to close around .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Vibrating a little\\, .+ begins to glow brightly\\, sparks dancing from its fur\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ a leg and draws it back\\, ready to kick it powerfully at .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A strange\\, odorless vapor begins to drift from the body of .+\\, spreading out across the area\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Surrounding .+ in the coils of its body\\, .+ begins to squeeze with bone-crushing force\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The rotors on .+ begin to whir faster and faster\\, until they are blurry with dangerous speed\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Threshing through the ground\\, .+ directly towards .+\\, claws extended\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Tiny particles within .+ link themselves together to form molecule-thin chains of deadly razors\\. Ominously\\, thecloud begins to spin\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ paws at the ground and lowers its head\\, preparing to charge at .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Moving backwards for a moment\\, .+ begins to prepare a syringe that .+ pulls from a fleshy fold of .+ body\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ gathers its many legs beneath it and arcs its dripping stinger overhead\\, preparing to attack with vicious speed\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Lifting its huge body up into the air\\, .+ rears back in preparation\\, acid dripping from its mandibles\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "A volatile anomaly's otherworldly, thrumming hum grows all-consuming and it presses on relentlessly, its center crackling with dark energy.",
+        "type": "regex"
+      },
+      {
+        "pattern": "An out-of-control FeTek assembly drone's curved beak begins to bob up and down erratically, the welding attachment beginning to glow even brighter.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ hauls its body high and it looms above you\\, moments from a terrible\\, crushing crash\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "A Vihana void crawler's chitin begins to shake, the plates vibrating against one another at a frequency that causes your head to ache as the vibrations sink into your core.",
+        "type": "regex"
+      },
+      {
+        "pattern": "An out-of-control FeTek assembly drone's curved beak begins to bob up and down erratically, the welding attachment beginning to glow even brighter.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "A volatile anomaly's otherworldly, thrumming hum grows all-consuming and it presses on relentlessly, its center crackling with dark energy.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "A Vihana void crawler's chitin begins to shake, the plates vibrating against one another at a frequency that causes your head to ache as the vibrations sink into your core.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "known windups 2",
+    "highlight": "yes",
+    "highlightFG": "#FFFFFF",
+    "highlightBG": "#8700AF",
+    "patterns": [
+      {
+        "pattern": "^.+ shudders violently, its amber eyes brightening with an electrical surge.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A bubble of light begins to form at the tip of a rogue mining drone's laser\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "damage dealt",
+    "highlight": "yes",
+    "highlightFG": "#00afd7",
+    "highlightBG": "#000000",
+    "patterns": [
+      {
+        "pattern": "Damage Dealt: ",
+        "type": "startOfLine"
+      }
+    ]
+  }
+]

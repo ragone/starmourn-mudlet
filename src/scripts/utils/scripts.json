@@ -1,0 +1,27 @@
+[
+  {
+    "name": "namespace",
+    "script": "starmourn.utils = starmourn.utils or {}"
+  },
+  {
+    "name": "cssman"
+  },
+  {
+    "name": "geyser"
+  },
+  {
+    "name": "table"
+  },
+  {
+    "name": "events"
+  },
+  {
+    "name": "skills"
+  },
+  {
+    "name": "persistance"
+  },
+  {
+    "name": "string"
+  }
+]

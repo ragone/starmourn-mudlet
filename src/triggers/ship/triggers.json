@@ -1,0 +1,73 @@
+
+[
+  {
+    "name": "backfire tracking",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) System: .+ Backfiring: (\\w+)",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "vitals gag",
+    "fireLength": "14",
+    "patterns": [
+      {
+        "pattern": "^-- .+ \\((\\w+)\\) -- Damage .+-----------------------------$",
+        "type": "regex"
+      }
+    ],
+    "script": "deleteLine()"
+  },
+  {
+    "name": "weapon autoassign module",
+    "patterns": [
+      {
+        "pattern": "^Module #(\\d+) - \\b(.+)\\b\\s+(Active|Inactive)$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "mining auto tether",
+    "patterns": [
+      {
+        "pattern": "^.+ halts gracefully to avoid collision with asteroid\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": "send('ship tether asteroid')"
+  },
+  {
+    "name": "empty beacon gag",
+    "fireLength": "1",
+    "patterns": [
+      {
+        "pattern": "You send out your beacon, but there is nothing within range.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "deleteLine()"
+  },
+  {
+    "name": "reload",
+    "patterns": [
+      {
+        "pattern": "^.+\\#(\\d+) has 0 ammunition loaded\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": "send('ship weapon reload '..matches[2])"
+  },
+  {
+    "name": "ship balance",
+    "patterns": [
+      {
+        "pattern": "You have recovered your balance.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "if starmourn.ui.on_ship then deleteLine() end"
+  }
+]

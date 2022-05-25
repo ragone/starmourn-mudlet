@@ -1,0 +1,391 @@
+[
+  {
+    "name": "settings",
+    "patterns": [
+      {
+        "pattern": "Password correct. Welcome to Starmourn.",
+        "type": "substring"
+      }
+    ]
+  },
+  {
+    "name": "capture map ground",
+    "fireLength": "23",
+    "multiline": "yes",
+    "patterns": [
+      {
+        "pattern": "---",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "v\\d+",
+        "type": "regex"
+      }
+    ],
+    "children": [
+      {
+        "name": "line ground",
+        "patterns": [
+          {
+            "pattern": ".+",
+            "type": "regex"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch ground map",
+    "patterns": [
+      {
+        "pattern": "You disembark from ",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "Your vision comes back into focus as your consciousness returns to your physical body.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "capture map space",
+    "fireLength": "50",
+    "multiline": "yes",
+    "patterns": [
+      {
+        "pattern": "Location:",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "^Location: .+ \\(\\d+, \\d+\\)$",
+        "type": "regex"
+      }
+    ],
+    "children": [
+      {
+        "name": "line space",
+        "patterns": [
+          {
+            "pattern": ".+",
+            "type": "regex"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "switch space map",
+    "patterns": [
+      {
+        "pattern": "You embark the ship.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "capture starchart",
+    "fireLength": "35",
+    "multiline": "yes",
+    "patterns": [
+      {
+        "pattern": "Map of the Starmourn Sector:",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "return starmourn.ui.mapper.config.starchart",
+        "type": "lua"
+      }
+    ],
+    "children": [
+      {
+        "name": "line starchart",
+        "patterns": [
+          {
+            "pattern": ".+",
+            "type": "regex"
+          }
+        ]
+      },
+      {
+        "name": "end starchart",
+        "patterns": [
+          {
+            "pattern": "You are in",
+            "type": "startOfLine"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "check starchart",
+    "patterns": [
+      {
+        "pattern": "^You have entered the .+ subsec\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You are now leaving the .+ subsec\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "in space",
+    "patterns": [
+      {
+        "pattern": "return capturing == 'space'",
+        "type": "lua"
+      }
+    ],
+    "children": [
+      {
+        "name": "space prompt",
+        "multiline": "yes",
+        "patterns": [
+          {
+            "type": "prompt"
+          },
+          {
+            "pattern": "Speed: \\S+ \\((\\d+)%\\) \\| Hull: (\\d+)% \\| Shield: (\\d+)% \\| Cap: (\\d+)%",
+            "type": "regex"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "capture map hacking",
+    "fireLength": "70",
+    "multilineDelta": "1",
+    "patterns": [
+      {
+        "pattern": "+",
+        "type": "startOfLine"
+      }
+    ],
+    "children": [
+      {
+        "name": "stop update",
+        "patterns": [
+          {
+            "pattern": "Directory list",
+            "type": "substring"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hackmap2",
+    "fireLength": "2",
+    "patterns": [
+      {
+        "pattern": "Routes/",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "north",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "east",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "south",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "west",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "ICE/",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "@glitch",
+        "type": "substring"
+      },
+      {
+        "pattern": "@polymorphic_antivirus",
+        "type": "substring"
+      },
+      {
+        "pattern": "@antivirus",
+        "type": "substring"
+      },
+      {
+        "pattern": "@honeypot",
+        "type": "substring"
+      },
+      {
+        "pattern": "Devices/",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "@processor_array",
+        "type": "substring"
+      },
+      {
+        "pattern": "@decoy",
+        "type": "substring"
+      },
+      {
+        "pattern": "Processes/",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "@firewall",
+        "type": "substring"
+      },
+      {
+        "pattern": "@mobile",
+        "type": "substring"
+      },
+      {
+        "pattern": "@self",
+        "type": "substring"
+      },
+      {
+        "pattern": "@scanner",
+        "type": "substring"
+      },
+      {
+        "pattern": "self-replicating_antivirus.Replicate()",
+        "type": "substring"
+      }
+    ],
+    "children": [
+      {
+        "name": "stop update 2",
+        "patterns": [
+          {
+            "pattern": "return isPrompt()",
+            "type": "lua"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "capture beacon",
+    "fireLength": "300",
+    "multiline": "yes",
+    "patterns": [
+      {
+        "pattern": "------------------------------< Entities Nearby >------------------------------",
+        "type": "exactMatch"
+      }
+    ],
+    "children": [
+      {
+        "name": "line beacon",
+        "patterns": [
+          {
+            "pattern": ".+",
+            "type": "regex"
+          }
+        ]
+      },
+      {
+        "name": "end beacon",
+        "highlight": "yes",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "return isPrompt()",
+            "type": "lua"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "armor reset",
+    "patterns": [{ "pattern": "< Used armor >", "type": "regex" }],
+    "script": "starmourn.ui.info.armor = {}"
+  },
+  {
+    "name": "armor",
+    "patterns": [
+      {
+        "pattern": "(gauntlet|goggles|head|torso|arms|hands|waist|legs|feet)\\s+(\\d+)\\s+(.{44})",
+        "type": "regex"
+      }
+    ],
+    "script": "starmourn.ui.info.armor[matches[3]] = {name = string.trim(matches[4]), slot = matches[2]}; starmourn.ui.info.update_inventory()"
+  },
+  {
+    "name": "prompt",
+    "patterns": [
+      {
+        "type": "prompt"
+      }
+    ],
+    "script": "creplaceLine('\\n')"
+  },
+  {
+    "name": "npcitems",
+    "patterns": [
+      {
+        "pattern": "[PCs]:",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "[NPCs]:",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "if gmcp.Room and gmcp.Room.Info.name..'.' == line then return true else return false end",
+        "type": "lua"
+      },
+      {
+        "pattern": "[Items]:",
+        "type": "startOfLine"
+      }
+    ],
+    "script": "deleteLine()"
+  },
+  {
+    "name": "ship beacon",
+    "patterns": [
+      {
+        "pattern": "Keying a switch on your navigation console, you do a scan of the surrounding area.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "deleteLine()"
+  },
+  {
+    "name": "ship beacon",
+    "patterns": [
+      {
+        "pattern": "Keying a switch on your navigation console, you do a scan of the surrounding area.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "deleteLine()"
+  },
+  {
+    "name": "help capture",
+    "patterns": [
+      {
+        "pattern": "return starmourn.ui.info.capture",
+        "type": "lua"
+      }
+    ],
+    "script": "starmourn.ui.info.handle_help_capture()"
+  },
+  {
+    "name": "help end",
+    "patterns": [
+      {
+        "type": "prompt"
+      }
+    ],
+    "script": "if starmourn.ui.info.capture then starmourn.ui.info.handle_help() end"
+  }
+]

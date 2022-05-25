@@ -1,0 +1,2 @@
+clearWindow('mapwinSpace')
+capturing = 'space'
