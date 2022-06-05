@@ -1,7 +1,7 @@
 {
   "package": "Starmourn UI",
   "title": "The Unofficial Starmourn UI for Mudlet",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "ragone",
   "icon": "logo.jpg",
   "dependencies": ""
