@@ -11,13 +11,7 @@ function starmourn.ui.init(event, package)
 		starmourn.ui.create_background()
 		starmourn.ui.create_boxes()
 		starmourn.ui.create_borders()
-		starmourn.ui.modules.create()
-		starmourn.ui.adj.top:show()
-		starmourn.ui.adj.bottom:show()
-		starmourn.ui.adj.topright:show()
-		starmourn.ui.adj.bottomright:show()
-		starmourn.ui.adj.topleft:show()
-		starmourn.ui.adj.bottomleft:show()
+		starmourn.ui.update_windows()
 		starmourn.ui.on_ship = false
 		starmourn.ui.capacitor_bf = "No"
 		starmourn.ui.engine_bf = "No"

@@ -4,7 +4,6 @@ starmourn.ui.info.windows = starmourn.ui.info.windows or {}
 starmourn.ui.info.use = true
 starmourn.ui.info.config = starmourn.ui.info.config or {}
 starmourn.ui.info.config.types = { "Room", "Tasks", "Inventory" }
-starmourn.ui.info.config.fontsize = getFontSize() - 2
 starmourn.ui.info.config.tasklimit = 24
 starmourn.ui.info.config.preservebackground = true
 starmourn.ui.info.config.gag = true
@@ -101,7 +100,7 @@ function starmourn.ui.info:create()
 			x = "5%",
 			y = "12%",
 			autoWrap = false,
-			fontSize = starmourn.ui.info.config.fontsize,
+			fontSize = starmourn.ui.fontsize,
 			width = "90%",
 			height = "85%",
 		}, starmourn.ui.info.container)

@@ -1,4 +1,5 @@
 starmourn.ui = starmourn.ui or {}
+starmourn.ui.fontsize = getFontSize() - 3
 
 function starmourn.ui.update_stylesheet()
 	local background_color = "rgba(0, 0, 0, 100)"
@@ -389,19 +390,6 @@ function starmourn.ui.create_background()
 		width = "82c",
 		height = "25%",
 	})
-
-	starmourn.ui.adj.left:hide()
-	starmourn.ui.adj.right:hide()
-
-	-- starmourn.ui.adj.top:attachToBorder('top')
-	-- starmourn.ui.adj.bottom:attachToBorder('bottom')
-	starmourn.ui.adj.top:connectToBorder("top")
-	starmourn.ui.adj.bottom:connectToBorder("bottom")
-
-	starmourn.ui.adj.top:hide()
-	starmourn.ui.adj.top:lockContainer()
-	starmourn.ui.adj.bottom:lockContainer()
-
 	starmourn.ui.left = Geyser.Label:new(
 		{ name = "starmourn.ui.left", x = 0, y = 0, width = "100%", height = "100%" },
 		starmourn.ui.adj.left
@@ -418,6 +406,12 @@ function starmourn.ui.create_background()
 		{ name = "starmourn.ui.top", x = 0, y = 0, width = "100%", height = "100%" },
 		starmourn.ui.adj.top
 	)
+
+	starmourn.ui.top:setStyleSheet([[
+    margin: 20px;
+    image: url(]] .. getMudletHomeDir() .. [[/@PKGNAME@/logo.jpg);
+    background-color: #000000;
+]])
 	starmourn.ui.top:setClickCallback(starmourn.ui.room_desc.click)
 	starmourn.ui.top:setCursor("ResizeVertical")
 
@@ -426,6 +420,30 @@ function starmourn.ui.create_background()
 		starmourn.ui.adj.bottom
 	)
 	starmourn.ui.bottom:setStyleSheet(backgroundcss:getCSS())
+end
+
+function starmourn.ui.update_windows()
+	starmourn.ui.adj.bottom:show()
+	starmourn.ui.adj.topright:show()
+	starmourn.ui.adj.bottomright:show()
+	starmourn.ui.adj.topleft:show()
+	starmourn.ui.adj.bottomleft:show()
+	starmourn.ui.adj.left:hide()
+	starmourn.ui.adj.right:hide()
+
+	starmourn.ui.adj.topright:attachToBorder("right")
+	starmourn.ui.adj.bottomright:attachToBorder("right")
+	starmourn.ui.adj.topleft:attachToBorder("left")
+	starmourn.ui.adj.bottomleft:attachToBorder("left")
+	starmourn.ui.adj.top:attachToBorder("top")
+	starmourn.ui.adj.bottom:attachToBorder("bottom")
+
+	starmourn.ui.adj.top:lockContainer()
+	starmourn.ui.adj.bottom:lockContainer()
+	starmourn.ui.adj.topright:lockContainer()
+	starmourn.ui.adj.bottomright:lockContainer()
+	starmourn.ui.adj.topleft:lockContainer()
+	starmourn.ui.adj.bottomleft:lockContainer()
 end
 
 function starmourn.ui.create_borders()
@@ -492,7 +510,7 @@ function starmourn.ui.create_boxes()
 		x = "5%",
 		y = "5%",
 		autoWrap = true,
-		fontSize = getFontSize(),
+		fontSize = starmourn.ui.fontsize,
 		width = "90%",
 		height = "90%",
 	}, starmourn.ui.helpwindow)
@@ -509,7 +527,7 @@ function starmourn.ui.create_boxes()
 		y = 0,
 		width = "25%",
 		height = "50%",
-		fontSize = getFontSize() - 2,
+		fontSize = starmourn.ui.fontsize,
 	})
 	starmourn.ui.adj.bottomright = Adjustable.Container:new({
 		name = "Room Info",
@@ -517,7 +535,7 @@ function starmourn.ui.create_boxes()
 		y = "50%",
 		width = "25%",
 		height = "50%",
-		fontSize = getFontSize() - 2,
+		fontSize = starmourn.ui.fontsize,
 	})
 	starmourn.ui.adj.topleft = Adjustable.Container:new({
 		name = "Map",
@@ -525,7 +543,7 @@ function starmourn.ui.create_boxes()
 		y = "0%",
 		width = "25%",
 		height = "75%",
-		fontSize = getFontSize() - 2,
+		fontSize = starmourn.ui.fontsize,
 	})
 	starmourn.ui.adj.bottomleft = Adjustable.Container:new({
 		name = "Mindsim",
@@ -533,69 +551,47 @@ function starmourn.ui.create_boxes()
 		y = "75%",
 		width = "25%",
 		height = "25%",
-		fontSize = getFontSize() - 2,
+		fontSize = starmourn.ui.fontsize,
 	})
 
-	starmourn.ui.adj.topright:attachToBorder("right")
-	starmourn.ui.adj.bottomright:attachToBorder("right")
-	starmourn.ui.adj.topleft:attachToBorder("left")
-	starmourn.ui.adj.bottomleft:attachToBorder("left")
-
-	starmourn.ui.adj.topright:lockContainer()
-	starmourn.ui.adj.bottomright:lockContainer()
-	starmourn.ui.adj.topleft:lockContainer()
-	starmourn.ui.adj.bottomleft:lockContainer()
-
-	starmourn.ui.topright = Geyser.Label:new(
-		{
-			name = "starmourn.ui.topright",
-			x = 35,
-			y = 30,
-			width = "100%-70px",
-			height = "100%-41px",
-			fontSize = getFontSize() - 2,
-		},
-		starmourn.ui.adj.topright
-	)
+	starmourn.ui.topright = Geyser.Label:new({
+		name = "starmourn.ui.topright",
+		x = 35,
+		y = 30,
+		width = "100%-70px",
+		height = "100%-41px",
+		fontSize = starmourn.ui.fontsize,
+	}, starmourn.ui.adj.topright)
 	starmourn.ui.topright:setStyleSheet(boxcss:getCSS())
 
-	starmourn.ui.bottomright = Geyser.Label:new(
-		{
-			name = "starmourn.ui.bottomright",
-			x = 35,
-			y = 30,
-			width = "100%-70px",
-			height = "100%-41px",
-			fontSize = getFontSize() - 2,
-		},
-		starmourn.ui.adj.bottomright
-	)
+	starmourn.ui.bottomright = Geyser.Label:new({
+		name = "starmourn.ui.bottomright",
+		x = 35,
+		y = 30,
+		width = "100%-70px",
+		height = "100%-41px",
+		fontSize = starmourn.ui.fontsize,
+	}, starmourn.ui.adj.bottomright)
 	starmourn.ui.bottomright:setStyleSheet(boxcss:getCSS())
 
-	starmourn.ui.topleft = Geyser.Label:new(
-		{
-			name = "starmourn.ui.topleft",
-			x = 35,
-			y = 30,
-			width = "100%-70px",
-			height = "100%-41px",
-			fontSize = getFontSize() - 2,
-		},
-		starmourn.ui.adj.topleft
-	)
+	starmourn.ui.topleft = Geyser.Label:new({
+		name = "starmourn.ui.topleft",
+		x = 35,
+		y = 30,
+		width = "100%-70px",
+		height = "100%-41px",
+		fontSize = starmourn.ui.fontsize,
+	}, starmourn.ui.adj.topleft)
 	starmourn.ui.topleft:setStyleSheet(boxcss:getCSS())
 
-	starmourn.ui.bottomleft = Geyser.Label:new(
-		{
-			name = "starmourn.ui.bottomleft",
-			x = 35,
-			y = 30,
-			width = "100%-70px",
-			height = "100%-41px",
-			fontSize = getFontSize() - 3,
-		},
-		starmourn.ui.adj.bottomleft
-	)
+	starmourn.ui.bottomleft = Geyser.Label:new({
+		name = "starmourn.ui.bottomleft",
+		x = 35,
+		y = 30,
+		width = "100%-70px",
+		height = "100%-41px",
+		fontSize = starmourn.ui.fontsize,
+	}, starmourn.ui.adj.bottomleft)
 	starmourn.ui.bottomleft:setStyleSheet(boxcss:getCSS())
 
 	setWindowWrap(getColumnCount())

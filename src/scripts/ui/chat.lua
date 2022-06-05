@@ -10,7 +10,6 @@ starmourn.ui.chat.config.alltab = "All"
 starmourn.ui.chat.config.blink = true
 starmourn.ui.chat.config.blinktime = 3
 starmourn.ui.chat.config.blinkfromall = false
-starmourn.ui.chat.config.fontsize = getFontSize() - 2
 starmourn.ui.chat.config.preservebackground = true
 starmourn.ui.chat.config.gag = false
 starmourn.ui.chat.config.filterccc = false
@@ -116,7 +115,7 @@ function starmourn.ui.chat:create()
 			x = "5%",
 			y = "12%",
 			autoWrap = true,
-			fontSize = starmourn.ui.chat.config.fontsize,
+			fontSize = starmourn.ui.fontsize,
 			width = "90%",
 			height = "85%",
 		}, starmourn.ui.chat.container)
