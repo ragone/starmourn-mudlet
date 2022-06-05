@@ -827,7 +827,6 @@ end
 starmourn.utils.events.register("send command", "sysDataSendRequest", "starmourn.ui.info.handle_send_command")
 starmourn.utils.events.register("task list", "gmcp.IRE.Tasks.List", "starmourn.ui.info.handle_ire_tasks_list")
 starmourn.utils.events.register("task update", "gmcp.IRE.Tasks.Update", "starmourn.ui.info.handle_ire_tasks_update")
---starmourn.utils.events.register('task completed', 'gmcp.IRE.Tasks.Completed')
 starmourn.utils.events.register("items list", "gmcp.Char.Items.List", "starmourn.ui.info.handle_char_items_list")
 starmourn.utils.events.register("items add", "gmcp.Char.Items.Add", "starmourn.ui.info.handle_char_items_add")
 starmourn.utils.events.register("items remove", "gmcp.Char.Items.Remove", "starmourn.ui.info.handle_char_items_remove")

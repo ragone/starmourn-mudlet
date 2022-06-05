@@ -122,8 +122,8 @@ function starmourn.ui.chat:create()
 		starmourn.ui.chat.windows[tab]:setColor(winr, wing, winb)
 		starmourn.ui.chat.windows[tab]:enableCommandLine()
 		local cmdcss = CSSMan.new([[
-  background-color: rgb(0,10,10);
-]])
+			background-color: rgb(0,10,10);
+		]])
 		starmourn.ui.chat.windows[tab]:setCmdLineStyleSheet(cmdcss:getCSS())
 
 		local cmd = to_cmds[tab]

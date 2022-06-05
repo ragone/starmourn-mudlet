@@ -345,23 +345,7 @@
       {
         "pattern": "[Items]:",
         "type": "startOfLine"
-      }
-    ],
-    "script": "deleteLine()"
-  },
-  {
-    "name": "ship beacon",
-    "patterns": [
-      {
-        "pattern": "Keying a switch on your navigation console, you do a scan of the surrounding area.",
-        "type": "exactMatch"
-      }
-    ],
-    "script": "deleteLine()"
-  },
-  {
-    "name": "ship beacon",
-    "patterns": [
+      },
       {
         "pattern": "Keying a switch on your navigation console, you do a scan of the surrounding area.",
         "type": "exactMatch"

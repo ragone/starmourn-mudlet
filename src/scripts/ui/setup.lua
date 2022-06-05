@@ -411,7 +411,7 @@ function starmourn.ui.create_background()
     margin: 20px;
     image: url(]] .. getMudletHomeDir() .. [[/@PKGNAME@/logo.jpg);
     background-color: #000000;
-]])
+	]])
 	starmourn.ui.top:setClickCallback(starmourn.ui.header.click)
 	starmourn.ui.top:setCursor("ResizeVertical")
 
