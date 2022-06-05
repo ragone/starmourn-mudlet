@@ -412,7 +412,7 @@ function starmourn.ui.create_background()
     image: url(]] .. getMudletHomeDir() .. [[/@PKGNAME@/logo.jpg);
     background-color: #000000;
 ]])
-	starmourn.ui.top:setClickCallback(starmourn.ui.room_desc.click)
+	starmourn.ui.top:setClickCallback(starmourn.ui.header.click)
 	starmourn.ui.top:setCursor("ResizeVertical")
 
 	starmourn.ui.bottom = Geyser.Label:new(

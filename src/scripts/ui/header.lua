@@ -1,7 +1,7 @@
-starmourn.ui.room_desc = starmourn.ui.room_desc or {}
-starmourn.ui.room_desc.collapsed = starmourn.ui.room_desc.collapsed or true
+starmourn.ui.header = starmourn.ui.header or {}
+starmourn.ui.header.collapsed = starmourn.ui.header.collapsed or true
 
-function starmourn.ui.room_desc.update()
+function starmourn.ui.header.update()
 	starmourn.ui.adj.top:lowerAll()
 
 	starmourn.ui.top:setStyleSheet([[
@@ -24,13 +24,13 @@ function starmourn.ui.room_desc.update()
 ]])
 end
 
-function starmourn.ui.room_desc.click()
-	if starmourn.ui.room_desc.collapsed then
+function starmourn.ui.header.click()
+	if starmourn.ui.header.collapsed then
 		starmourn.ui.adj.top:resize(nil, "90%")
 	else
 		starmourn.ui.adj.top:resize(nil, "170px")
 	end
-	starmourn.ui.room_desc.collapsed = not starmourn.ui.room_desc.collapsed
+	starmourn.ui.header.collapsed = not starmourn.ui.header.collapsed
 end
 
-starmourn.utils.events.register("room desc", "gmcp.Room.Info", "starmourn.ui.room_desc.update")
+starmourn.utils.events.register("room desc", "gmcp.Room.Info", "starmourn.ui.header.update")
