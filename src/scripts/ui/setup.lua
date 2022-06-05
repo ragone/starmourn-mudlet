@@ -344,20 +344,6 @@ function starmourn.ui.update_stylesheet()
   ]])
 end
 
-function starmourn.ui.set_borders()
-	local w, h = getMainWindowSize()
-
-	starmourn.ui.border_left = w / 4
-	starmourn.ui.border_top = h / 19
-	starmourn.ui.border_bottom = h / 19
-	starmourn.ui.border_right = w / 4
-
-	setBorderLeft(starmourn.ui.border_left)
-	setBorderTop(starmourn.ui.border_top)
-	setBorderBottom(starmourn.ui.border_bottom)
-	setBorderRight(starmourn.ui.border_right)
-end
-
 function starmourn.ui.create_background()
 	local backgroundcss = CSSMan.new([[ background-color: rgb(0,0,0); ]])
 	starmourn.ui.adj = starmourn.ui.adj or {}

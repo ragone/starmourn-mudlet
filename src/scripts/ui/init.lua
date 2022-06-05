@@ -7,7 +7,6 @@ function starmourn.ui.init(event, package)
 	end
 	starmourn.ui.loadTimer = tempTimer(0, function()
 		starmourn.ui.update_stylesheet()
-		starmourn.ui.set_borders()
 		starmourn.ui.create_background()
 		starmourn.ui.create_boxes()
 		starmourn.ui.create_borders()
