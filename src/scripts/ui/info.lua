@@ -403,8 +403,6 @@ end
 
 function starmourn.ui.info.handle_room_info()
   if oldnum ~= gmcp.Room.Info.num then
-    if starmourn.ui.info.look_timer then killTimer(starmourn.ui.info.look_timer) end
-    -- starmourn.ui.info.look_timer = tempTimer(6, [[decho("<215,255,135>You look around<192,192,192>\n]]..gmcp.Room.Info.desc..[[\n")]])
     starmourn.targetindex = 0
     oldnum = gmcp.Room.Info.num
   end
@@ -639,7 +637,6 @@ function starmourn.ui.info.update_inventory()
 end
 
 function starmourn.ui.info.handle_send_command(event, cmd)
-  if starmourn.ui.info.look_timer then killTimer(starmourn.ui.info.look_timer) end
   local lowerCmd = string.lower(cmd)
   local helpCmds = {"help", "fhelp", "clhelp"}
   for _, helpCmd in ipairs(helpCmds) do

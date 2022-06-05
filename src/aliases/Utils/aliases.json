@@ -8,10 +8,5 @@
     "name": "my location",
     "regex": "^myloc$",
     "script": "send([[ft I'm at ]]..gmcp.Room.Info.name..[[ in ]]..gmcp.Room.Info.area..[[.]])"
-  },
-  {
-    "name": "look",
-    "regex": "^look$|^l$",
-    "script": "if starmourn.ui.info.look_timer then killTimer(starmourn.ui.info.look_timer) end; send(matches[1], false)"
   }
 ]

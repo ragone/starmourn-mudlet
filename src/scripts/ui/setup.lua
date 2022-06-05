@@ -394,15 +394,7 @@ function starmourn.ui.create_background()
 end
 
 function starmourn.ui.create_borders()
-  local borders = {
-    ["top"] = "42px",
-    ["bottom"] = "11px",
-    ["left"] = "34px",
-    ["right"] = "35px"
-  }
-
   local containers = {"topright", "topleft", "bottomright", "bottomleft"}
-
   for _, container in pairs(containers) do
     -- Topright
     local top = Geyser.Label:new({ name = container.."top", x = 0, y = 0, width = '100%', height = '42px'}, starmourn.ui.adj[container])
