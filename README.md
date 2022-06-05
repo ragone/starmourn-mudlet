@@ -6,6 +6,10 @@
 
 An unoffical UI for Spacemourn.
 
+<p align="center">
+<img src="screenshot.png" />
+</p>
+
 ## Features
 
 - Basic GUI for Starmourn
