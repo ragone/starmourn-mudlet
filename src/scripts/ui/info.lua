@@ -272,8 +272,8 @@ function starmourn.ui.update_room()
 		dechoPopup(
 			"infowinRoom",
 			string.format("%s%s", starmourn.ui.info.config.text_color, player.name),
-			{ 'send("look ' .. player.name .. '", false)', 'send("honors ' .. player.name .. '", false)' },
-			{ "look", "honors" },
+			{ 'send("look ' .. player.name .. '", false)', 'send("honors ' .. player.name .. '", false)', 'appendCmdLine("'..player.name..'")' },
+			{ "look", "honors", "insert" },
 			true
 		)
 	end
@@ -325,8 +325,9 @@ function starmourn.ui.update_room()
 			[[send('look ]] .. entity.id .. [[', false)]],
 			[[send('greet ]] .. entity.id .. [[', false)]],
 			[[send('xenozoology scan ]] .. entity.id .. [[', false)]],
+			'appendCmdLine("'..entity.id..'")'
 		}
-		local cmds = { "look", "greet", "scan" }
+		local cmds = { "look", "greet", "scan", "insert" }
 		if not noTarget then
 			table.insert(labels, 1, [[send('st ]] .. entity.id .. [[', false)]])
 			table.insert(cmds, 1, "target")
@@ -350,8 +351,11 @@ function starmourn.ui.update_room()
 			)
 		)
 
-		local labels = { [[send('look ]] .. data.id .. [[', false)]] }
-		local cmds = { "look" }
+		local labels = {
+			[[send('look ]] .. data.id .. [[', false)]],
+			'appendCmdLine("'..data.id..'")'
+		}
+		local cmds = { "look", "insert" }
 		if data.attrib and string.find(data.attrib, "t") then
 			table.insert(labels, [[send('take ]] .. data.id .. [[', false)]])
 			table.insert(cmds, "take")
@@ -383,8 +387,9 @@ function starmourn.ui.update_room()
 				)
 				local labels = {
 					[[send('get ]] .. containerItem.id .. [[ from ]] .. data.id .. [[', false)]],
+					'appendCmdLine("'..containerItem.id..'")'
 				}
-				local cmds = { "take out" }
+				local cmds = { "take out", "insert" }
 				dechoPopup(
 					"infowinRoom",
 					string.format("%s%s", color("DimGrey"), containerItem.name),
@@ -595,8 +600,9 @@ function starmourn.ui.info.update_inventory()
 		local labels = {
 			[[send('look ]] .. id .. [[', false)]],
 			[[send('unwield ]] .. id .. [[', false)]],
+			'appendCmdLine("'..id..'")'
 		}
-		local cmds = { "look", "unwield" }
+		local cmds = { "look", "unwield", "insert" }
 		dechoPopup(
 			"infowinInventory",
 			string.format("%s%s", starmourn.ui.info.config.text_color, entity.name),
@@ -626,8 +632,9 @@ function starmourn.ui.info.update_inventory()
 
 		local labels = {
 			[[send('probe ]] .. id .. [[', false)]],
+			'appendCmdLine("'..id..'")'
 		}
-		local cmds = { "look" }
+		local cmds = { "look", "insert" }
 		dechoPopup(
 			"infowinInventory",
 			string.format(
@@ -670,8 +677,9 @@ function starmourn.ui.info.update_inventory()
 		local labels = {
 			[[send('look ]] .. id .. [[', false)]],
 			[[send('remove ]] .. id .. [[', false)]],
+			'appendCmdLine("'..id..'")'
 		}
-		local cmds = { "look", "remove" }
+		local cmds = { "look", "remove", "insert" }
 		dechoPopup(
 			"infowinInventory",
 			string.format("%s%s", starmourn.ui.info.config.text_color, entity.name),
@@ -704,8 +712,9 @@ function starmourn.ui.info.update_inventory()
 			[[send('look ]] .. entity.id .. [[', false)]],
 			[[send('drop ]] .. entity.id .. [[', false)]],
 			[[send('wield ]] .. entity.id .. [[', false)]],
+			'appendCmdLine("'..entity.id..'")'
 		}
-		local cmds = { "look", "drop", "wield" }
+		local cmds = { "look", "drop", "wield", "insert" }
 		local wearable = hasAttrib(entity, "W")
 		if wearable then
 			table.insert(labels, [[send('wear ]] .. entity.id .. [[', false)]])
@@ -756,8 +765,9 @@ function starmourn.ui.info.update_inventory()
 			[[send('look ]] .. id .. [[', false)]],
 			[[send('drop ]] .. id .. [[', false)]],
 			[[send('wield ]] .. id .. [[', false)]],
+			'appendCmdLine("'..id..'")'
 		}
-		local cmds = { "look", "drop", "wield" }
+		local cmds = { "look", "drop", "wield", "insert" }
 		dechoPopup(
 			"infowinInventory",
 			string.format(
@@ -785,8 +795,9 @@ function starmourn.ui.info.update_inventory()
 				)
 				local labels = {
 					[[send('get ]] .. containerItem.id .. [[ from ]] .. id .. [[', false)]],
+					'appendCmdLine("'..containerItem.id..'")'
 				}
-				local cmds = { "take out" }
+				local cmds = { "take out", "insert" }
 				dechoPopup(
 					"infowinInventory",
 					string.format("%s%s", color("DimGrey"), containerItem.name),
