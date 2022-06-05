@@ -7,12 +7,9 @@ function starmourn.ui.header.update()
 	starmourn.ui.top:setStyleSheet([[
 		qproperty-wordWrap: true;
 		margin: 20px;
-		padding: 10px 20px;
 		qproperty-alignment: 'AlignTop';
 		font-family: Dosis;
-		border-radius: 10px;
 		image: none;
-		background-color: #1f2225;
 	]])
 	starmourn.ui.top:echo([[
 		<p style="font-size:35px; font-weight: bold;"><font color="#ffffff">]] .. gmcp.Room.Info.area .. [[</font></p>
@@ -27,7 +24,7 @@ function starmourn.ui.header.click()
 	if starmourn.ui.header.collapsed then
 		starmourn.ui.adj.top:resize(nil, "90%")
 	else
-		starmourn.ui.adj.top:resize(nil, "170px")
+		starmourn.ui.adj.top:resize(nil, "140px")
 	end
 	starmourn.ui.header.collapsed = not starmourn.ui.header.collapsed
 end

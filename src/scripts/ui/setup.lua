@@ -352,7 +352,7 @@ function starmourn.ui.create_background()
 		x = "25%",
 		y = 0,
 		width = "50%",
-		height = "170px",
+		height = "140px",
 		autoLoad = false,
 	})
 	starmourn.ui.adj.bottom = Adjustable.Container:new({
@@ -468,6 +468,14 @@ function starmourn.ui.create_borders()
       border-image: url(]] .. getMudletHomeDir() .. [[/@PKGNAME@/left.png);
     ]])
 	end
+
+	local header = Geyser.Label:new(
+		{ name = "headerbottom", x = 0, y = "100%-11px", width = "100%", height = "11px" },
+		starmourn.ui.adj.top
+	)
+	header:setStyleSheet([[
+      border-image: url(]] .. getMudletHomeDir() .. [[/@PKGNAME@/bottom.png);
+    ]])
 end
 
 function starmourn.ui.create_boxes()
@@ -578,8 +586,10 @@ function starmourn.ui.create_boxes()
 		height = "100%-41px",
 		fontSize = starmourn.ui.fontsize,
 	}, starmourn.ui.adj.bottomleft)
-	starmourn.ui.bottomleft:setStyleSheet(boxcss:getCSS())
 
+	starmourn.ui.bottomleft:setStyleSheet([[
+		font-family: Bitstream Vera Sans Mono;
+	]])
 	setWindowWrap(getColumnCount())
 end
 
