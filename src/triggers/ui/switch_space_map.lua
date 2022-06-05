@@ -1,1 +1,1 @@
-starmourn.ui.mapper.switch('Space')
+starmourn.ui.mapper.switch("Space")

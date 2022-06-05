@@ -1,5 +1,5 @@
-if gmcp.Room.Info.environment == 'bridge' then
-  send("ship thrust 100 50")
+if gmcp.Room.Info.environment == "bridge" then
+	send("ship thrust 100 50")
 else
-  send("up")
+	send("up")
 end

@@ -1,7 +1,7 @@
-if gmcp.Room.Info.environment == 'bridge' then
-  send("ship turn ne")
-elseif gmcp.Room.Info.name == 'In space.' then
-  send('spacewalk ne')
+if gmcp.Room.Info.environment == "bridge" then
+	send("ship turn ne")
+elseif gmcp.Room.Info.name == "In space." then
+	send("spacewalk ne")
 else
-  send("ne")
+	send("ne")
 end

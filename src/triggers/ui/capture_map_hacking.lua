@@ -1,8 +1,8 @@
 if hackclear then
-  clearUserWindow("mapwinHacking")
-  starmourn.ui.mapper.switch('Hacking')
+	clearUserWindow("mapwinHacking")
+	starmourn.ui.mapper.switch("Hacking")
 
-  hackclear = false
+	hackclear = false
 end
 
 selectCurrentLine()

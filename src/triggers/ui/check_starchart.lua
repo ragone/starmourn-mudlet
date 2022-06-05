@@ -1,1 +1,1 @@
-send('starchart', false)
+send("starchart", false)

@@ -1,1 +1,1 @@
-setTriggerStayOpen('capture starchart', 0)
+setTriggerStayOpen("capture starchart", 0)

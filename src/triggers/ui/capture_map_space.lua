@@ -1,2 +1,2 @@
-clearWindow('mapwinSpace')
-capturing = 'space'
+clearWindow("mapwinSpace")
+capturing = "space"

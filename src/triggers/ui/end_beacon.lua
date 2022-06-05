@@ -1,2 +1,2 @@
 deleteFull()
-setTriggerStayOpen('capture beacon', 0)
+setTriggerStayOpen("capture beacon", 0)

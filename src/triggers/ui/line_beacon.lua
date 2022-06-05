@@ -1,4 +1,4 @@
 selectCurrentLine()
 copy()
-appendBuffer('beacon')
+appendBuffer("beacon")
 deleteLine()

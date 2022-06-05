@@ -1,1 +1,1 @@
-starmourn.ui.mapper.switch('Mudlet')
+starmourn.ui.mapper.switch("Mudlet")

@@ -1,4 +1,4 @@
 selectCurrentLine()
 copy()
-appendBuffer('starchart')
+appendBuffer("starchart")
 deleteLine()

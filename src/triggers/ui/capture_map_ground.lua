@@ -1,3 +1,3 @@
-clearWindow('mapwinGround')
+clearWindow("mapwinGround")
 groundMapCount = 0
-capturing = 'ground'
+capturing = "ground"
